@@ -39,6 +39,13 @@
 			    		<th>Minutes to Arrival</th>
 			    	</tr>
 			    </thead>
+			    	<tr>
+			    		<td id="displayTrainName"></td>
+			    		<td id="displayDestination"></td>
+			    		<td id="displayFrequency"></td>
+			    		<td id="displayNextArrival"></td>
+			    		<td id="displayMinutesToArrival"></td>
+			    	</tr>
 			  </table>
 			</div><!-- panel-body -->
 		</div><!-- panel-default -->
@@ -62,7 +69,7 @@
 						<label for="trainFrequency">Frequency (minutes):</label>
 						<input type="text" class="form-control" id="trainFrequency">
 						<br>
-						
+
 						<button type="button" class="btn btn-primary" id="addTrain">Add Train</button>
 						<button type="button" class="btn btn-danger" id="removeTrain">Remove Train</button>
 						<button type="button" class="btn btn-warning" id="addTrain">Update Train</button>

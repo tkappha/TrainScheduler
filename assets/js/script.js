@@ -20,6 +20,8 @@ var arrivalFrequency = 0;
 
 //********** Functions ************//
 
+
+//on clicking the  Add Train button, adds info to Firebase //
 $("#addTrain").on("click", function(){
 	trainName = $("#trainName").val().trim();
 	destination = $("#destination").val().trim();
@@ -32,6 +34,14 @@ $("#addTrain").on("click", function(){
 		firstArrival: firstArrival,
 		arrivalFrequency: arrivalFrequency
 	})
+})
+
+// displays Train Information
+firebase.database().ref().on("value", function(snapshot){
+	$("#displayTrainName").html(snapshot.val().trainName);
+	$("#displayDestination").html(snapshot.val().destination);
+	$("#displayNextArrival").html(snapshot.val().firstArrival);
+	$("#displayFrequency").html(snapshot.val().arrivalFrequency);
 })
 
 //********** Main Process *********//
