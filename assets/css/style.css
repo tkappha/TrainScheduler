@@ -37,3 +37,15 @@ h1 {
 	font-family: 'Cherry Swash', cursive;
 }
 
+.panel-body {
+	/*background: linear-gradient(rgba(20,20,20, .9),
+		                        rgba(20,20,20, .9)),
+								url('../images/parchment.jpg');*/
+	background-image: url("../images/parchment.jpg");
+	background-size: cover;
+}
+
+#trainScheduleHeader{
+	height: 150px;
+	float: right;
+}
