@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Scheduler</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Bowlby+One|Cherry+Swash:700|Montserrat:800" rel="stylesheet">
+
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<img src="assets/images/Spirit_Train.png" id="logo">
+			<h1>Spirit Tracks Train Schedule</h1>
+		</div>
+	</div><!--container-->
+
+<!--******* Display Train Schedules *************-->
+	<div class="container">
+		<div class="panel panel-default">
+		  <div class="panel-heading">Train Schedule</div>
+		  	<div class="panel-body">
+
+			  <!-- Table -->
+			  <table class="table">
+			    <thead>
+			    	<tr>
+			    		<th>Train Name</th>
+			    		<th>Destination</th>
+			    		<th>Frequency (min)</th>
+			    		<th>Next Arrival</th>
+			    		<th>Minutes to Arrival</th>
+			    	</tr>
+			    </thead>
+			  </table>
+			</div><!-- panel-body -->
+		</div><!-- panel-default -->
+	</div><!-- container -->
+
+<!-- ************** enter in new Train information *********-->
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-heading">New Train Information</div>
+				<div class="panel-body">
+					<div class="input-group">
+						<label for="trainName">Train Name:</label>
+						<input type="text" class="form-control" id="trainName">
+						<br>
+						<label for="destination">Destination:</label>
+						<input type="text" class="form-control" id="destination">
+						<br>
+						<label for="firstTrainArrivalTime">First Train Time (HH:mm military time):</label>
+						<input type="text" class="form-control" id="firstTrainArrivalTime">
+						<br>
+						<label for="trainFrequency">Frequency (minutes):</label>
+						<input type="text" class="form-control" id="trainFrequency">
+						<br>
+						<button type="button" class="btn btn-primary" id="addTrain">Add Train</button>
+						<button type="button" class="btn btn-danger" id="removeTrain">Remove Train</button>
+						<button type="button" class="btn btn-warning" id="addTrain">Update Train</button>
+					</div><!--input group -->
+				</div><!-- panel-body -->
+		</div><!-- panel-default -->
+	</div><!--container-->
+
+
+
+
+	 
+
+	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyDUUMii4jppRvCoEjLON8b-ZXZ8696S0eo",
+	    authDomain: "trainscheduler-70615.firebaseapp.com",
+	    databaseURL: "https://trainscheduler-70615.firebaseio.com",
+	    projectId: "trainscheduler-70615",
+	    storageBucket: "trainscheduler-70615.appspot.com",
+	    messagingSenderId: "549345623502"
+	  };
+	  firebase.initializeApp(config);
+	</script>	
+
+	<script type="text/javascript" src="assets/js/script.js">
+		
+	</script>
+	
+
+</body>
+</html>

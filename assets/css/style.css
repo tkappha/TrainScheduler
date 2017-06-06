@@ -1,0 +1,39 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	/*background-image: url("../../assets/images/railroadTracks.jpg");*/
+	background-size: cover;
+	background: linear-gradient(rgba(20,20,20, .7),
+		                        rgba(20,20,20, .7)),
+								url('../../assets/images/railroadTracks.jpg');
+
+}
+
+.input-group {
+	width: 100%;
+}
+
+.btn {
+	margin-right: 15px;
+	margin-top: 15px;
+}
+
+div.jumbotron {
+	padding-top: 0px;
+	/*background-color: #b9f4f9;*/
+	background-color: #0e1111;
+	/*color: #4F6228;*/
+	color: #d8e4bc;
+	text-align: center;
+
+}
+
+#logo {
+	width: 35%;
+	float: left;
+}
+
+h1 {
+	padding-top: 5%;
+	font-family: 'Cherry Swash', cursive;
+}
+
