@@ -28,16 +28,18 @@ $("#addTrain").on("click", function(){
 	firstArrival = $("#firstTrainArrivalTime").val().trim();
 	arrivalFrequency = $("#trainFrequency").val().trim();
 
-	firebase.database().ref().set({
+	firebase.database().ref().push({
 		trainName: trainName,
 		destination: destination,
 		firstArrival: firstArrival,
 		arrivalFrequency: arrivalFrequency
 	})
+
+	$("#trainName").empty();
 })
 
 // displays Train Information
-firebase.database().ref().on("value", function(snapshot){
+firebase.database().ref().on("child_added", function(snapshot){
 	$("#displayTrainName").html(snapshot.val().trainName);
 	$("#displayDestination").html(snapshot.val().destination);
 	$("#displayNextArrival").html(snapshot.val().firstArrival);
